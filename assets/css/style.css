@@ -83,7 +83,7 @@ main {
     background-blend-mode: soft-light;
     min-height: 30vh;
     color: var(--light);
-    padding: 2% 0;
+    padding: 1% 0;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
@@ -94,7 +94,7 @@ main {
 }
 
 .banner div {
-    flex: 0 0 90%;
+    flex: 0 0 50%;
 }
 
 .banner h2 {
@@ -143,12 +143,12 @@ main {
 .projects-flex, .banner-profile {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .banner-profile {
     height: 300px;
-    width: 300px;
+    max-width: 240px;
 }
 
 .flex-item {
@@ -205,6 +205,13 @@ main {
   
 .surf-report {
     background-image: url("../images/02-portfolio-4.jpg");
+}
+
+.profile-pic {
+    background-image: url("../images/portfolio-profile.jpg");
+    background-size: contain;
+    flex-basis: 100%;
+    margin: 0 0 0 -100px;
 }
 
 .contact-me address {
@@ -281,6 +288,12 @@ main {
     .banner {
       justify-content: center;
       text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+        display: none;
     }
   
     .contact address {
