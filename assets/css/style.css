@@ -86,9 +86,11 @@ main {
     padding: 2% 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content:flex-start;
+    justify-content:space-between;
     align-items: center;
     text-align: start;
+    flex-direction: row;
+    align-content: center;
 }
 
 .banner div {
@@ -138,10 +140,15 @@ main {
     margin-bottom: 20px;
 }
 
-.projects-flex {
+.projects-flex, .banner-profile {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.banner-profile {
+    height: 300px;
+    width: 300px;
 }
 
 .flex-item {
@@ -227,3 +234,57 @@ main {
     background-size: 100% 88%;
     color: var(--secondary);
   }
+
+@media screen and (max-width: 980px) {
+    header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 10vw;
+    }
+  
+    header nav {
+      justify-content: center;
+    }
+  
+    .section h2,
+    .section div {
+      flex: 0 0 100%;
+    }
+  
+    .section h2 {
+      border-right: none;
+      border-bottom: 4px solid var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: left;
+      font-size: 7vw;
+    }
+  }
+  
+@media screen and (max-width: 768px) {
+    .flex-item,
+    .flex-item:first-child {
+      flex-basis: 100%;
+    }
+  
+    .flex-item:first-child {
+      min-height: 150px;
+    }
+  
+    .banner {
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .contact address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+} 
